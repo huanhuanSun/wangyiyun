@@ -1,0 +1,634 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a,i,b,em{
+    text-decoration: none;
+    /* color: #000; */
+}
+a{
+    cursor: pointer;
+}
+body, textarea, select, input, button{
+    font-size: 12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 28px;
+    /* font:12px/ */
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+.ellipsis{
+    overflow:hidden;
+	text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap: normal;
+}
+.diplaynone{
+    display: none;
+}
+
+main,footer{
+    overflow: hidden;
+}
+
+.wyyTop{
+    height: 70px;
+    background-color: #242424;
+
+}
+.wyyTop .wyyInnner, .mSubnav .mSubnavInner{
+    width: 1100px;
+    margin: 0 auto;
+}
+.wyyInnner .wyyLogo{
+    float: left;
+    height: 69px;
+    background: url(../static/topbar.png);
+    color: transparent;
+    padding-right: 50px;
+}
+.wyyInnner .wyyTitleList{
+    float: left;
+}
+.wyyInnner .wyyTitleList li{
+    float: left;
+    /* position: relative; */
+}
+.wyyInnner .wyyTitleList li.slt{
+    position: relative;
+}
+.wyyInnner .wyyTitleList li.slt .cor{
+    position: absolute;
+    left:42%;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #C20C0C transparent;
+}
+.wyyInnner .wyyTitleList li a:hover{
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+}
+.wyyInnner .wyyTitleList li a{
+    color: #ccc;
+    text-decoration: none;
+    float: left;
+    line-height: 70px;
+    padding: 0 19px;
+}
+.wyyInnner .wyyTitleList li a.active{
+    color: #fff;
+    background-color: #000;
+}
+.wyyInnner .wyyTitleList li.last{
+    position: relative;
+}
+.wyyInnner .wyyTitleList li .hot{
+    position: absolute;
+    width: 28px;
+    height: 18px;
+    display: block;
+    background:url(../static/topbar.png) -190px 0;
+    right: -7px;
+    top: 10px;
+}
+
+.wyyTop .search{
+    margin: 20px 0 0 40px;
+    float: left;
+    background-color: #fff;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+.wyyTop .search span{
+    display: block;
+    background: url(../static/topbar.png)  no-repeat -5px -102px;
+}
+.wyyTop .search span input{
+    border:none;
+    width: calc(100% - 30px);
+    margin-left: 20px;
+    line-height: 27px;
+}
+.wyyTop .search span input:focus{
+    outline: none;
+}
+
+.wyyTop .author{
+    float: left;
+    height: 30px;
+    margin: 20px 0 0 10px;
+    border: 1px solid rgb(245, 231, 231);
+    border-radius: 20px;
+    color: #aaa;
+    width: 90px;
+    text-align: center;
+}
+.wyyTop .author:hover{
+    color: #fff;
+    border-color: #fff;
+}
+.wyyTop .login{
+    height: 30px;
+    margin: 20px 0 0 20px;
+    float: left;
+}
+.wyyTop .login a{
+    color: #888;
+}
+
+
+
+.mSubnav{
+    height: 35px;
+    background-color: #C20C0C;
+}
+.mSubnav ul{
+    margin-left: 170px;
+    overflow: hidden;
+}
+.mSubnav ul li{
+    float: left;
+
+}
+.mSubnav ul li a{
+    padding: 0 20px;
+    color: #fff;
+    height: 34px;
+    float: left;
+    line-height: 34px;
+}
+.mSubnav ul li a span{
+    padding: 0 13px;
+}
+
+/* banner */
+nav{
+    background-image: url(../static/bannerbg.jpg);
+    background-size:6000px ;
+    background-position: center center;
+}
+nav .clientBox{
+    position: absolute;
+    width: 254px;
+    height: 284px;
+    top:0;
+    right: 0;
+    background-image: url(../static/download.png);
+}
+nav .banner, .discoverModule{
+    width: 982px;
+    height: 284px;
+    margin: 0 auto;
+    /* border:1px solid red; */
+    position: relative;
+}
+.banner .imgbg{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.banner .imgbg img{
+    width: 730px;
+}
+.banner .bannerDot{
+    position: absolute;
+    width: 730px;
+    height: 20px;
+    bottom: 5px;
+    padding: 0 20%;
+}
+.banner .bannerDot .dot{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.banner .bannerDot .dot.dotSlt{
+    background-color: #C20C0C;
+}
+.banner .bannerDire{
+    position: absolute;
+    top: 45%;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+.banner .bannerDire.bannerPre{
+    left: -80px;
+    transform: rotate(-135deg);
+}
+.banner .bannerDire.bannerNext{
+    right: -80px;
+    transform: rotate(45deg);
+}
+
+.discoverModule{
+    border-right: 1px solid #aaa;
+    overflow: hidden;
+    height: 100%;
+}
+.discoverModule section{
+    float: left;
+    width: calc(100% - 254px);
+    padding: 20px 20px 40px;
+    background-color: #fff;
+    border-right: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+}
+.discoverModule aside{
+    width: 254px;
+    float: left;
+    border-left:1px solid red;
+}
+.discoverModule section ul.singUl{
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: -43px;
+    margin-top: 20px;;
+}
+.discoverModule .more{
+    float: right;
+}
+.discoverModule .more .more_arrow{
+    background-image: url(../static/index.png);
+    background-position: 0 -240px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+.rmtjBlock,.xdsjBlock{
+    padding-bottom: 30px;
+}
+.discoverModule section .rmtjBlock .singUl li{
+    /* width: 140px; */
+    height: 204px;
+    padding: 0 0 30px 42px;
+    float: left;
+    position: relative;
+}
+.discoverModule section .rmtjBlock .singUl .singerPicBg{
+    width: 140px;
+    height: 140px;
+}
+.discoverModule section .rmtjBlock   img{
+    width: 100%;
+}
+.discoverModule section .rmtjBlock  .bottom{
+    position: absolute;
+    width: 140px;
+    bottom: 64px;
+    height: 25px;
+    background-color: #000;
+    opacity: 0.5;
+}
+.rmtj,.xdsj,.bd{
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 2px solid #C20C0C;
+    overflow: hidden;
+}
+.discoverModule section .circle{
+    float: left;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: 4px solid #C20C0C;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.discoverModule section .text{
+    float: left;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.titleblock li{
+    padding: 0 12px;
+    float: left;
+    color: #666;
+}
+.discoverModule .bottom{
+    color: #fff;
+
+}
+
+.bottom .erji{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../static/iconall.png);
+    background-position: 0 -21px;
+    margin: 6px 5px 9px 7px;
+}
+.bottom .num{
+}
+.bottom .play{
+    display: inline-block;
+    /* position: absolute; */
+    top: 5px;
+    width: 16px;
+    height: 17px;
+    background-image: url(../static/iconall.png);
+    background-position: 0px -60px;
+    margin: 5px 5px 0 0;
+}
+.rmtjBlock .tiptext{
+    width: 140px;
+    display: block;
+    color: #000;
+    font-size: 14px;
+    line-height: 18px;
+}
+.xdsjBlock{
+
+}
+.xdsjBlock .disk{
+    padding: 15px 16px;
+    position: relative;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+.xdsjBlock .disk .inner{
+    overflow: hidden;
+    height: 150px;
+}
+.xdsjBlock .disk .inner .arrow{
+    width: 10px;
+    height: 10px;
+    float: left;
+    display: block;
+    border-top: 3px solid #888;
+    position: absolute;
+    top: 45%;
+}
+
+.xdsjBlock .disk .inner .arrow_left{
+    border-left: 3px solid #888;
+    transform: rotate(-45deg);
+    left: 10px;
+
+}
+.xdsjBlock .disk .inner .arrow_right{
+    border-left: 3px solid #888;
+    transform: rotate(135deg);
+    right: 10px;
+
+}
+.xdsjbanner{
+    position: relative;
+    width: 645px;
+}
+.xdsjBlock .disk .ulList{
+    float: left;
+    width: 645px;
+    padding: 0 5px;
+    position: absolute;
+    left: 0;
+}
+.xdsjBlock .disk .ulList li{
+    float: left;
+    margin-left: 12px;
+    width: 113px;
+    height: 150px;
+}
+.xdsjBlock .disk .ulList li .bg{
+    background-image: url(../static/coverall.png);
+    width: 117px;
+    height: 100px;
+    background-position: 0 -566px;
+}
+.xdsjBlock .disk .ulList .sing_name a{
+    width: 110px;
+    color: #000;
+}
+.xdsjBlock .disk .ulList .sing_author a{
+    width: 110px;
+    color:#aaa
+}
+
+.bd_container{
+    margin-top: 20px;
+    width: 100%;
+    border:1px solid #ddd;
+    overflow: hidden;
+    background-image: url(../static/bdbg.png);
+    background-position: -5px 0px;
+}
+.bd_container dl{
+    width: 33%;
+    /* background-color: pink; */
+    float: left;
+    /* border-right: 1px solid #ddd; */
+    /* padding: 20px 15px; */
+}
+.bd_container dl ol{
+    padding-left: 15px;
+}
+.bd_container dl:nth-child(1) ol{
+    padding-left: 5px;
+}
+.bd_container .dt_left{
+    position: relative;
+}
+.bd_container .dt_left img{
+    width: 80px;
+    height: 80px;
+}
+
+.bd_container .dt_left .msk{
+    position: absolute;
+    background-image: url(../static/coverall.png);
+    background-position: 0 -570px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.bd_container dt{
+    overflow: hidden;
+    /* padding-bottom: 10px; */
+    padding: 20px 15px 10px;
+}
+.bd_container dl:nth-child(2) dt{
+    padding-left: 20px;
+}
+.bd_container dl:nth-child(3) dt{
+    padding-left: 25px;
+}
+.dt_right{
+    margin-left: 10px;
+}
+.dt_right a{
+    /* color: ; */
+    display: block;
+}
+.dt_right .title{
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+.dt_right .play,.dt_right .direcory{
+    float: left;
+    width: 22px;
+    height: 22px;
+    /* border: 1px solid red; */
+}
+.dt_right .btn{
+    margin-top: 10px;
+}
+.dt_right .play{
+    background-image: url(../static/index.png);
+    background-position: -267px -205px;
+}
+.dt_right .direcory{
+    margin-left: 10px;
+    background-image: url(../static/index.png);
+    background-position: -300px -206px;
+}
+.sing_list li{
+    height: 32px;
+    line-height: 33px;
+    padding-left: 10px;
+    position: relative;
+}
+.sing_list li .sing_list_btns{
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+.sing_list li .sing_list_btns .play,.sing_list li .sing_list_btns .add,.sing_list li .sing_list_btns .direcory{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    /* border:1px solid red; */
+    background-image: url('../static/index.png');
+}
+.sing_list li .sing_list_btns .add{
+    background-image: url('../static/icon.png');
+    background-position: 3px -696px;
+}
+.sing_list li .sing_list_btns .play{
+    background-position: -266px -267px;
+}
+.sing_list li .sing_list_btns .direcory{
+    background-position: -294px -267px;
+}
+.sing_list .num{
+    padding: 5px;
+    color: #aaa;
+    font-size: 16px;
+}
+.sing_list .num.top{
+    color: #C20C0C;
+}
+.sing_list .sing_name{
+    color: #000;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sing_list .see_more{
+    float: right;
+    margin-right: 20px;
+}
+.aside{
+    background-color: pink;
+    height: 100%;
+}
+
+footer{
+    border-top: 1px solid #ddd;
+    padding: 10px 0 20px;
+}
+footer .footer_inner{
+    width: 980px;
+    margin: 0 auto;
+}
+
+footer .copy{
+    
+}
+footer .copy a{
+    color: #aaa;
+}
+.enter li{
+    float: left;
+    margin-left: 10px;
+    width: 70px;
+    height: 70px;
+}
+footer .enter{
+    margin-right: 10px;
+}
+
+footer .enter a{
+    display: block;
+    width: 50px;
+    height: 45px;
+    /* border:1px solid red; */
+    background-image: url(../static/foot_enter_new.png);
+    background-size: 110px 552px;
+    margin-left: 18%;
+}
+footer .enter i{
+    display: block;
+    width: 80px;
+    height: 20px;
+    /* border: 1px solid red; */
+    background-image: url(../static/foot_enter_tt.png);
+    background-size: 180px ;
+    margin: 0 auto;
+}
+footer .enter li:nth-child(1) a{
+    background-position: -60px -456.5px;
+}
+footer .enter li:nth-child(1) i{
+    background-position: 6px -444.5px;
+}
+footer .enter li:nth-child(2) a{
+    background-position: 50px -654px;
+}
+footer .enter li:nth-child(2) i{
+    background-position: 6px -750px;
+    width: 52px;
+}
+footer .enter li:nth-child(3) a{
+    background-position: -110px -552px;
+}
+footer .enter li:nth-child(3) i{
+    background-position: -180px -484px;
+    width: 53px;
+}
+footer .enter li:nth-child(4) a{
+    background-position: 161px -602px;
+}
+footer .enter li:nth-child(4) i{
+    background-position: 181px -547px;
+    width: 40px;
+}
+footer .enter li:nth-child(5) a{
+    background-position: -110px -654px;
+}
+footer .enter li:nth-child(5) i{
+    background-position: -180px -404px;
+    width: 48px;
+}
